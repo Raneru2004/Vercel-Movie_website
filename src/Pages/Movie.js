@@ -25,14 +25,14 @@ const Movie = () => {
 
 
     async function getMovie(){
-        const Movie = await fetch(`http://www.omdbapi.com/?apikey=4124ddf1&i=${imdbId}`);
+        const Movie = await fetch(`https://www.omdbapi.com/?apikey=4124ddf1&i=${imdbId}`);
         const MovieData = await Movie.json();
         setMovie(MovieData)
         
         
     }
     async function getMovies(){
-        const Movies = await fetch(`http://www.omdbapi.com/?apikey=4124ddf1&s=${name}`);
+        const Movies = await fetch(`https://www.omdbapi.com/?apikey=4124ddf1&s=${name}`);
         const MoviesData = await Movies.json();
         const moviesArr=MoviesData.Search;
         setMovies(moviesArr.slice(0,7))
